@@ -1,16 +1,19 @@
-import rigoImageUrl from "../assets/img/rigo-baby.jpg";
-import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
+import React from 'react'
+import NavBar from '../components/NavBar.jsx'
+import List from '../components/List.jsx'
+import ListaPlanet from '../components/ListaPlanet.jsx'
+import ListaVehicle from '../components/ListaVehicle.jsx'
 
-export const Home = () => {
+const Home = () => {
 
-  const {store, dispatch} =useGlobalReducer()
+  return (
+    <div>
+       <NavBar/>
+       <List/>
+       <ListaPlanet/>
+       <ListaVehicle/>
+    </div>
+  )
+}
 
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!!</h1>
-			<p>
-				<img src={rigoImageUrl} />
-			</p>
-		</div>
-	);
-}; 
+export default Home
